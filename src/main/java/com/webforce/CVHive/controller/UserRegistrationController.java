@@ -16,7 +16,7 @@ import java.util.Date;
  * Created by andrey on 12.12.2015.
  */
 @Controller
-public class UserRegistration {
+public class UserRegistrationController {
     @Autowired
     private UserService userService;
 

@@ -8,4 +8,5 @@ import com.webforce.CVHive.entity.User;
 public interface UserDao {
     void saveUser(User user);
     void updateUser(User user);
+    User findByLogin(String login);
 }

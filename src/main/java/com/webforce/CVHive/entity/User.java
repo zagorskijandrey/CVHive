@@ -23,7 +23,7 @@ public class User {
     private char gender;
     @Column(name = "dob")
     private Date date;
-    @Column(name = "login")
+    @Column(name = "login", unique=true)
     private String login;
     @Column(name = "email")
     private String email;
