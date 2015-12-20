@@ -2,6 +2,8 @@ package com.webforce.CVHive.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by andrey on 07.12.2015.
@@ -91,6 +93,12 @@ public class User {
     private String hobbies;
     @Column(name = "resume")
     private String resume;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "user_userprofile",
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "userprofile_id") })
+    private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
 
     public int getUserId() {
         return userId;
@@ -410,5 +418,14 @@ public class User {
 
     public void setResume(String resume) {
         this.resume = resume;
+    }
+
+
+    public Set<UserProfile> getUserProfiles() {
+        return userProfiles;
+    }
+
+    public void setUserProfiles(Set<UserProfile> userProfiles) {
+        this.userProfiles = userProfiles;
     }
 }

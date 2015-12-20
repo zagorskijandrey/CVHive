@@ -7,13 +7,9 @@
 
 <html>
 <head>
-    <title>Registration</title>
+    <title>CVHive</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <!--
-    Polygon Template
-    http://www.templatemo.com/preview/templatemo_400_polygon
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,14 +27,11 @@
 
 </head>
 <body>
-
-
-
 <div class="site-header">
     <div class="main-navigation">
         <div class="responsive_menu">
             <ul>
-                <li><a class="show-5 templatemo_page5" href="/home">Home</a></li>
+                <li><a class="show-5 templatemo_page5" href="/homePage">Home</a></li>
             </ul>
         </div>
         <div class="container">
@@ -53,7 +46,7 @@
                 </div>
                 <div class="col-md-9 main_menu">
                     <ul>
-                        <li><a class="show-5 templatemo_page5" href="/home">
+                        <li><a class="show-5 templatemo_page5" href="/homePage">
                             <span class="fa fa-home"></span>
                             Home</a></li>
                     </ul>
@@ -63,9 +56,7 @@
     </div> <!-- /.main-navigation -->
 </div> <!-- /.site-header -->
 
-
-
-<div align="center" class="col-md-5 col-sm-12">
+<div class="col-md-3 col-md-offset-3" >
     <form id="form" action="${pageContext.request.contextPath}/registrationStep_A" method="post" >
         <div class="templatemo_form">
             <input name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name*" maxlength="40">
@@ -77,6 +68,9 @@
             <input name="email" type="text" class="form-control" id="email" placeholder="Your Email*" maxlength="40">
         </div>
         <div class="templatemo_form">
+            <input name="login" type="text" class="form-control" id="login" placeholder="Login*" maxlength="40">
+        </div>
+        <div class="templatemo_form">
         <input name="password" type="text" class="form-control" id="password" placeholder="Password*" maxlength="40">
         </div>
         <div class="templatemo_form">
@@ -85,47 +79,11 @@
         <div class="templatemo_form"><button type="submit" class="btn btn-primary">Submit</button></div>
     </form>
 </div>
-<div class="templatemo_footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-sm-12">Copyright &copy; 2084 Company Name |
-                Photos by <a rel="nofollow" href="http://unsplash.com">Unsplash</a></div>
-            <div class="col-md-3 col-sm-12 templatemo_rfooter">
-                <a href="#">
-                    <div class="hex_footer">
-                        <span class="fa fa-facebook"></span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="hex_footer">
-                        <span class="fa fa-twitter"></span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="hex_footer">
-                        <span class="fa fa-linkedin"></span>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="hex_footer">
-                        <span class="fa fa-rss"></span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="col-md-3 col-sm-12 leftalign">
+    <div class="templatemo_contacttitle">Contact Information</div>
+    <div class="clear"></div>
+    <p>Integer eu neque sed mi fringilla pellentesque a eget leo. Duis ornare diam lorem, sit amet tempor mauris fringilla in. Etiam semper tempus augue, at vehicula metus. Nam vestibulum tortor nec congue ornare.</p>
 </div>
-<!-- footer end -->
-<script>
-    $('.gallery_more').click(function(){
-        var $this = $(this);
-        $this.toggleClass('gallery_more');
-        if($this.hasClass('gallery_more')){
-            $this.text('Load More');
-        } else {
-            $this.text('Load Less');
-        }
-    });
-</script>
+
 </body>
 </html>

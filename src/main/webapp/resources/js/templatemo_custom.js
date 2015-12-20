@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
 		$("#menu-container .homepage").hide();
 		$(".support").hide();
 		$(".testimonials").hide();
-		return false;
+		return true;
 	});
 
 	$( window ).load(function() {
@@ -26,8 +26,9 @@ jQuery(document).ready(function($){
 		$(".main_menu a.templatemo_page2, .responsive_menu a.templatemo_page2").removeClass('active');
 		$(".main_menu a.templatemo_page3, .responsive_menu a.templatemo_page3").removeClass('active');
 		$(".main_menu a.templatemo_page5, .responsive_menu a.templatemo_page5").removeClass('active');
-		return false;
+		return true;
 	});
+
 
 	$(".main_menu a.templatemo_page2, .responsive_menu a.templatemo_page2").click(function(){
 		$("#menu-container .team").addClass("animated fadeInDown").show();
@@ -35,8 +36,9 @@ jQuery(document).ready(function($){
 		$(".main_menu a.templatemo_home, .responsive_menu a.templatemo_home").removeClass('active');
 		$(".main_menu a.templatemo_page3, .responsive_menu a.templatemo_page3").removeClass('active');
 		$(".main_menu a.templatemo_page5, .responsive_menu a.templatemo_page5").removeClass('active');
-		return false;
+		return true;
 	});
+
 
 	$(".main_menu a.templatemo_page3, .responsive_menu a.templatemo_page3").click(function(){
 		$("#menu-container .services").addClass("animated fadeInDown").show();
@@ -45,7 +47,7 @@ jQuery(document).ready(function($){
 		$(".main_menu a.templatemo_page2, .responsive_menu a.templatemo_page2").removeClass('active');
 		$(".main_menu a.templatemo_home, .responsive_menu a.templatemo_home").removeClass('active');
 		$(".main_menu a.templatemo_page5, .responsive_menu a.templatemo_page5").removeClass('active');
-		return false;
+		return true;
 	});
 
 	$(".main_menu a.templatemo_page5, .responsive_menu a.templatemo_page5").click(function(){
@@ -56,7 +58,7 @@ jQuery(document).ready(function($){
 		$(".main_menu a.templatemo_home, .responsive_menu a.templatemo_home").removeClass('active');
 		
 		loadScript();
-		return false;
+		return true;
 	});
 
 
@@ -82,7 +84,7 @@ jQuery(document).ready(function($){
 
 	$("a.menu-toggle-btn").click(function() {
 	  $(".responsive_menu").stop(true,true).slideToggle();
-	  return false;
+	  return true;
 	});
  
     $(".responsive_menu a").click(function(){

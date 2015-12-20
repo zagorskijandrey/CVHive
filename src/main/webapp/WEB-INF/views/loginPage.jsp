@@ -8,8 +8,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
@@ -17,7 +15,6 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet" type="text/css" />
@@ -37,10 +34,7 @@
     <div class="main-navigation">
         <div class="responsive_menu">
             <ul>
-                <li><a class="show-1 templatemo_home" href="#">Users</a></li>
-                <li><a class="show-2 templatemo_page2" href="#">Our team</a></li>
-                <li><a class="show-3 templatemo_page3" href="#">Services</a></li>
-                <li><a class="show-5 templatemo_page5" href="#">Contact</a></li>
+                <li><a class="show-5 templatemo_page5" href="/homePage">Contact</a></li>
             </ul>
         </div>
         <div class="container">
@@ -51,21 +45,12 @@
                     </a>
                 </div> <!-- /.col-md-12 -->
                 <div class="col-md-3 col-sm-12">
-                    <a href="#"><img src="<c:url value="/resources/images/templatemo_logo.jpg" />" alt="Polygon HTML5 Template"></a>
+                    <a href="#"><img src="<c:url value="/resources/images/templatemo_logo.jpg" />" alt="CVHive"></a>
                 </div>
                 <div class="col-md-9 main_menu">
                     <ul>
-                        <li><a class="show-1 templatemo_home" href="#">
-                            <span class="fa fa-users"></span>
-                            Users</a></li>
-                        <li><a class="show-2 templatemo_page2" href="#">
-                            <span class="fa fa-user-secret"></span>
-                            Our team</a></li>
-                        <li><a class="show-3 templatemo_page3" href="#">
-                            <span class="fa fa-cogs"></span>
-                            Services</a></li>
-                        <li><a class="show-5 templatemo_page5" href="#">
-                            <span class="fa fa-envelope"></span>
+                        <li><a class="show-5 templatemo_page5" href="/homePage">
+                            <span class="fa fa-home"></span>
                             Contact</a></li>
                     </ul>
                 </div> <!-- /.col-md-12 -->
@@ -77,7 +62,7 @@
     <div class="login-container">
         <div class="login-card">
             <div class="login-form">
-                <c:url var="loginUrl" value="/login" />
+                <c:url var="loginUrl" value="/j_spring_security_check" />
                 <form action="${loginUrl}" method="post" class="form-horizontal">
                     <c:if test="${param.error != null}">
                         <div class="alert alert-danger">
@@ -91,11 +76,11 @@
                     </c:if>
                     <div class="input-group input-sm">
                         <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
-                        <input type="text" class="form-control" id="username" name="login" placeholder="Enter Username" required>
+                        <input type="text" class="form-control" id="username" name="j_username" placeholder="Enter Username" required>
                     </div>
                     <div class="input-group input-sm">
                         <label class="input-group-addon" for="password"><i class="fa fa-lock"></i></label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                        <input type="password" class="form-control" id="password" name="j_password" placeholder="Enter Password" required>
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 

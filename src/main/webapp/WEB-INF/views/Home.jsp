@@ -777,6 +777,10 @@
     </div>
 </div>
 <!-- contact end -->
+<div>
+    Dear <strong>${user.firstName}</strong>, You are not authorized to access this page
+    <a href="<c:url value="/logout" />">Logout</a>
+</div>
 <!-- footer start -->
 <div class="templatemo_footer">
     <div class="container">

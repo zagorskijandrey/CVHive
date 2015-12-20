@@ -34,6 +34,11 @@ public abstract class AbstractDao<PK extends Serializable, T> {
         getSession().update(entity);
     }
 
+    @SuppressWarnings("unchecked")
+    public T getByKey(PK key) {
+        return (T) getSession().get(persistentClass, key);
+    }
+
     protected Criteria createEntityCriteria(){
         return getSession().createCriteria(persistentClass);
     }

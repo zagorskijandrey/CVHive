@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by andrey on 09.12.2015.
  */
@@ -27,5 +29,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public User findByLogin(String login) {
         return userDao.findByLogin(login);
+    }
+
+    @Override
+    public List<User> selectLastListUser(){
+        return userDao.selectLastListUser();
     }
 }
